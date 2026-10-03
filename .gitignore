@@ -1,0 +1,19 @@
+cat << 'EOF' > .gitignore
+target/
+build/
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Docker volumes
+pgdata/
+EOF
