@@ -16,5 +16,6 @@ build/
 # Docker volumes
 pgdata/
 
-# Demo
+# Demo + Explnation files
 *.ps1
+*.txt
