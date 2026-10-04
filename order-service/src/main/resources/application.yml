@@ -26,8 +26,20 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       acks: all
       retries: 3
+    consumer:
+      group-id: order-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: false
+    listener:
+      ack-mode: record
 
 outbox:
   polling:
     fixed-delay-ms: 3000
     batch-size: 50
+  purge:
+    cron: "0 0 2 * * *"
+    retention-days: 7
+    chunk-size: 1000
