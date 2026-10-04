@@ -1,4 +1,3 @@
-cat << 'EOF' > .gitignore
 target/
 build/
 *.class
@@ -16,4 +15,6 @@ build/
 
 # Docker volumes
 pgdata/
-EOF
+
+# Demo
+*.ps1
